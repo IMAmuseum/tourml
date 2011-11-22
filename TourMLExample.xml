@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- All tours have a root "Tour" element -->
+<tourml:Tour xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tourml="http://www.imamuseum.org/TourML/2011/11"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:gml="http://www.opengis.net/gml"
+	xsi:schemaLocation="http://www.imamuseum.org/TourML/2011/11 TourML.xsd"
+	tourml:id="org.imamuseum.tap.ToLiveForever">
+	
+	
+	<!-- Title information of the tour -->
+	<tourml:Title xml:lang="en">A sample TourML document</tourml:Title>
+	<tourml:Title xml:lang="es">Una muestra TourML documento</tourml:Title>
+	<tourml:Description xml:lang="en">
+        This tour is meant to demonstrate proper usage of the TourML standard.
+	</tourml:Description>
+	<tourml:Description xml:lang="es">
+        .....
+	</tourml:Description>
+	
+	<!-- General tour metadata -->
+	<tourml:Author>Indianapolis Museum of Art</tourml:Author>
+	<tourml:PublishDate>2010-10-14</tourml:PublishDate>
+	
+	<tourml:PropertySet>
+		<tourml:Property tourml:name="google-analytics">UA-123456</tourml:Property>
+	</tourml:PropertySet>
+	
+	<!-- An optional pointer to the first stop to start at -->
+	<tourml:RootStopRef tourml:id="stop-1"/>
+
+	<!-- List of all application specific resources -->
+	<tourml:AppResource tourml:id="app-icon" tourml:usage="icon" />
+	<tourml:AppResource tourml:id="app-splash" tourml:usage="splash" />
+	
+	<!-- List of all tour assets -->
+	<tourml:Asset tourml:id="img-1">
+		<tourml:Source tourml:format="image/png" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/ankh-ct.png" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="icon-1">
+		<tourml:Source tourml:format="image/jpg" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/icon1.jpg" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="caption-1">
+		<tourml:Source xml:lang="en" tourml:lastModified="2011-09-29T12:01:32">
+			<tourml:Content>This is a caption</tourml:Content>
+		</tourml:Source>
+		<tourml:Source xml:lang="es" tourml:lastModified="2011-09-29T12:01:32">
+			<tourml:Content>Se trata de un título</tourml:Content>
+		</tourml:Source>
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="vid-1">
+		<tourml:Source tourml:format="video/quicktime" tourml:lastModified="2011-09-29T12:01:32" xml:lang="en" tourml:uri="file:///videos/ankh-ct.mov">
+			<tourml:PropertySet>
+				<tourml:Property tourml:name="duration">00:10:36</tourml:Property>
+				<tourml:Property tourml:name="width">1920</tourml:Property>
+				<tourml:Property tourml:name="height">1080</tourml:Property>
+			</tourml:PropertySet>
+		</tourml:Source>
+		<tourml:Source tourml:format="video/ogg-theora" tourml:lastModified="2011-09-29T12:01:32" xml:lang="en" tourml:uri="file:///videos/ankh-ct.ogg">
+			<tourml:PropertySet>
+				<tourml:Property tourml:name="duration">00:10:32</tourml:Property>
+				<tourml:Property tourml:name="width">1920</tourml:Property>
+				<tourml:Property tourml:name="height">1280</tourml:Property>
+			</tourml:PropertySet>
+		</tourml:Source>
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="aud-1">
+		<tourml:Source tourml:format="audio/mp3" tourml:lastModified="2011-09-29T12:01:32" xml:lang="en" tourml:uri="./audio/abbot-interview-english.mp3" />
+		<tourml:Source tourml:format="audio/mp3" tourml:lastModified="2011-09-29T12:01:32" xml:lang="es" tourml:uri="./audio/abbot-interview-spanish.mp3" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="www-1">
+		<tourml:Source tourml:format="text/html" tourml:uri="http://en.wikipedia.org/wiki/Mummy" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="obj-1">
+		<tourml:Source tourml:format="text/xml" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///objects.xml" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="app-icon">
+		<tourml:Source tourml:format="image/jpg" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/app-icon.jpg" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="app-splash">
+		<tourml:Source tourml:format="image/jpg" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/app-splash.jpg" />
+	</tourml:Asset>
+		
+	<!-- List of all tour stops -->
+	
+	<!-- Example of a stop group.  Refer to the Connections for this stop. -->
+	<tourml:Stop tourml:id="stop-1" tourml:view="StopGroup"> <!-- All stops require an id used for Ref -->
+		<tourml:Title xml:lang="en">Ankhaman's remains</tourml:Title>
+		<tourml:Title xml:lang="es">remainos Ankhaman's</tourml:Title>
+		<tourml:Description xml:lang="en">Ankhaman's remains</tourml:Description>
+		<tourml:Description xml:lang="es">remainos Ankhaman's</tourml:Description>
+		<tourml:PropertySet>
+			<tourml:Property tourml:name="code">100</tourml:Property>
+		</tourml:PropertySet>
+	</tourml:Stop>
+
+	<!-- Example of a stop for viewing an image -->
+	<tourml:Stop tourml:id="stop-2" tourml:view="ImageStop">
+		<tourml:Title xml:lang="en">CT imagery of the mummy</tourml:Title>
+		<tourml:AssetRef tourml:id="img-1" tourml:usage="primary" /> <!-- Ref to the main image for this stop -->
+		<tourml:AssetRef tourml:id="icon-1" tourml:usage="icon" /> <!-- Ref to a interface icon for the image stop -->
+		<tourml:AssetRef tourml:id="caption-1" tourml:usage="caption" /> <!-- A caption to display with the image -->
+		<tourml:PropertySet>
+			<tourml:Property tourml:name="code">200</tourml:Property>
+		</tourml:PropertySet>
+	</tourml:Stop>
+	
+	<!-- Example of a video stop that autoplays -->
+	<tourml:Stop tourml:id="stop-3" tourml:view="VideoStop">
+		<tourml:Title>How do you give a mummy a CT scan?</tourml:Title>
+		<tourml:AssetRef tourml:id="vid-1" tourml:usage="primary" />
+		<tourml:PropertySet>
+			<!-- no code means this stop is not directly accessible in the TAP keypad interface -->
+			<tourml:Property tourml:name="autoplay" xsd:type="boolean">true</tourml:Property>
+		</tourml:PropertySet>
+	</tourml:Stop>
+	
+	<!-- Example of an audio stop -->
+	<tourml:Stop tourml:id="stop-4" tourml:view="AudioStop">
+		<tourml:Title>Dr. Abbot's observations</tourml:Title>
+		<tourml:AssetRef tourml:id="aud-1" tourml:usage="primary" />
+		<tourml:PropertySet>
+			<tourml:Property tourml:name="autoplay" xsd:type="boolean">true</tourml:Property>
+		</tourml:PropertySet>
+	</tourml:Stop>
+	
+	<!-- Example of a web stop -->
+	<tourml:Stop tourml:id="stop-5">
+		<tourml:Title xml:lang="en">Learn about mummies on Wikipedia</tourml:Title>
+		<tourml:AssetRef tourml:id="web-1" tourml:usage="primary"/>
+		<tourml:PropertySet>
+			<tourml:Property tourml:name="code">300</tourml:Property>
+		</tourml:PropertySet>
+	</tourml:Stop>
+	
+	<!-- Example of an object stop -->
+	<tourml:Stop tourml:id="stop-6">
+		<tourml:Title xml:lang="en">Explore the object you are standing by</tourml:Title>
+		<tourml:AssetRef tourml:id="obj-1" />
+		<tourml:PropertySet>
+			<tourml:Property tourml:name="code">400</tourml:Property>
+		</tourml:PropertySet>
+	</tourml:Stop>
+	
+	<!-- Example of geolocation information in a stop -->
+	<tourml:Stop tourml:id="stop-7">
+		<tourml:Title xml:lang="en">See where this mummy was discovered</tourml:Title>
+		<tourml:GML>
+			<gml:Point srsName="EPSG:4326">
+				<gml:pos>21.052 -10.854</gml:pos>
+			</gml:Point>			
+		</tourml:GML>
+	</tourml:Stop>
+	
+	<!-- List of all tour connections -->
+	
+	<tourml:Connection tourml:srcId="stop-1" tourml:destId="stop-3" tourml:priority="0" /> <!-- Ref to CT video -->
+	<tourml:Connection tourml:srcId="stop-1" tourml:destId="stop-4" tourml:priority="1" /> <!-- Ref to Dr's audio interview -->
+
+</tourml:Tour>
