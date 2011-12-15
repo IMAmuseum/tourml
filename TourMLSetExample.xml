@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tourml:TourSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tourml="http://www.imamuseum.org/TourML/2011/11"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:gml="http://www.opengis.net/gml"
+	xsi:schemaLocation="http://www.imamuseum.org/TourML/2011/11 TourML.xsd">
+	
+	<!-- A list of references to external TourML documents -->
+	<tourml:TourRef tourml:uri="tour-doc-1.xml" tourml:lastModified="2011-09-29T12:01:32"/>
+	<tourml:TourRef tourml:uri="tour-doc-2.xml" tourml:lastModified="2011-09-22T05:45:12"/>
+	<tourml:TourRef tourml:uri="tour-doc-3.xml" tourml:lastModified="2011-09-21T11:26:30"/>
+	<tourml:TourRef tourml:uri="tour-doc-4.xml" tourml:lastModified="2011-09-09T01:39:50"/>
+	<tourml:TourRef tourml:uri="tour-doc-5.xml" tourml:lastModified="2011-08-22T22:02:20"/>
+	<tourml:TourRef tourml:uri="tour-doc-6.xml" tourml:lastModified="2011-08-13T20:59:00"/>
+	<tourml:TourRef tourml:uri="tour-doc-7.xml" tourml:lastModified="2011-08-12T01:29:04"/>
+	<tourml:TourRef tourml:uri="tour-doc-8.xml" tourml:lastModified="2011-07-01T03:40:05"/>
+	<tourml:TourRef tourml:uri="tour-doc-9.xml" tourml:lastModified="2011-05-15T09:30:24"/>
+	
+</tourml:TourSet>
