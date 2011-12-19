@@ -168,7 +168,7 @@
 				<!-- Ask Erin why this says to repeat only for language in LIDO -->
 				<xsd:annotation>
 					<xsd:documentation>
-					TODO
+					If not specified, the usage of the GML elements is assumed to be the location of the stop.
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
@@ -180,11 +180,15 @@
 	</xsd:complexType>
 	
 	<xsd:complexType name="GMLType">
-		<xsd:sequence>
-			<xsd:element ref="gml:Point" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="gml:LineString" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="gml:Polygon" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:annotation>
+        	<xsd:documentation>The optional usage attribute provides a method to define the relationship between this geometry and the containing element. For example, usage could be explicity set to "location" to define the location of a stop.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+			<xsd:element ref="gml:Point" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element ref="gml:LineString" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element ref="gml:Polygon" minOccurs="0" maxOccurs="unbounded" />
 		</xsd:sequence>
+		<xsd:attribute ref="tourml:usage" use="optional"/>
 	</xsd:complexType>
 
 	<xsd:complexType name="ConnectionType">
