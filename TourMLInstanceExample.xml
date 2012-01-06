@@ -6,7 +6,7 @@
 	xmlns:gml="http://www.opengis.net/gml"
 	xsi:schemaLocation="http://www.imamuseum.org/TourML/2011/11 TourML.xsd"
 	tourml:id="org.imamuseum.tap.ToLiveForever">
-	
+
 	
 	<!-- Title information of the tour -->
 	<tourml:Title xml:lang="en">A sample TourML document</tourml:Title>
@@ -43,12 +43,12 @@
 	</tourml:Asset>
 	
 	<tourml:Asset tourml:id="caption-1">
-		<tourml:Source xml:lang="en" tourml:lastModified="2011-09-29T12:01:32">
-			<tourml:Content>This is a caption</tourml:Content>
-		</tourml:Source>
-		<tourml:Source xml:lang="es" tourml:lastModified="2011-09-29T12:01:32">
-			<tourml:Content>Se trata de un título</tourml:Content>
-		</tourml:Source>
+		<tourml:Content xml:lang="en" tourml:lastModified="2011-09-29T12:01:32">
+			This is a caption
+		</tourml:Content>
+		<tourml:Content xml:lang="es" tourml:lastModified="2011-09-29T12:01:32">
+			Se trata de un título
+		</tourml:Content>
 	</tourml:Asset>
 	
 	<tourml:Asset tourml:id="vid-1">
