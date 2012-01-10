@@ -69,7 +69,7 @@
 	</tourml:Asset>
 	
 	<tourml:Asset tourml:id="geo-1">
-		<tourml:Content tourml:format="asdf">
+		<tourml:Content tourml:format="gml" tourml:lastModified="2011-09-29T12:01:32">
 			<tourml:Data>
 				<gml:Point srsName="EPSG:4326">
 					<gml:pos>21.052 -10.854</gml:pos>
