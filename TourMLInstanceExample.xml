@@ -44,10 +44,10 @@
 	
 	<tourml:Asset tourml:id="caption-1">
 		<tourml:Content xml:lang="en" tourml:lastModified="2011-09-29T12:01:32">
-			This is a caption
+			<tourml:Data>This is a caption</tourml:Data>
 		</tourml:Content>
 		<tourml:Content xml:lang="es" tourml:lastModified="2011-09-29T12:01:32">
-			Se trata de un título
+			<tourml:Data>Se trata de un título</tourml:Data>
 		</tourml:Content>
 	</tourml:Asset>
 	
@@ -66,6 +66,16 @@
 				<tourml:Property tourml:name="height">1280</tourml:Property>
 			</tourml:PropertySet>
 		</tourml:Source>
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="geo-1">
+		<tourml:Content tourml:format="asdf">
+			<tourml:Data>
+				<gml:Point srsName="EPSG:4326">
+					<gml:pos>21.052 -10.854</gml:pos>
+				</gml:Point>
+			</tourml:Data>
+		</tourml:Content>
 	</tourml:Asset>
 	
 	<tourml:Asset tourml:id="aud-1">
@@ -153,11 +163,7 @@
 	<!-- Example of geolocation information in a stop -->
 	<tourml:Stop tourml:id="stop-7">
 		<tourml:Title xml:lang="en">See where this mummy was discovered</tourml:Title>
-		<tourml:GML>
-			<gml:Point srsName="EPSG:4326">
-				<gml:pos>21.052 -10.854</gml:pos>
-			</gml:Point>			
-		</tourml:GML>
+		<tourml:AssetRef tourml:id="geo-1" />
 	</tourml:Stop>
 	
 	<!-- List of all tour connections -->
