@@ -42,6 +42,48 @@
 	<!-- Type declarations -->
 	<xsd:complexType name="TourType">
 		<xsd:sequence>
+			<xsd:element name="TourMetadata" type="tourml:TourMetadataType" minOccurs="0" />
+			<xsd:element name="Asset" type="tourml:AssetType"
+				maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A general asset for a tour. This element is used
+						to refer to media assets that occur in a tour. All instances of
+						this element inherit from the abstract AssetType. At least one
+						asset must be specified for all tours. Asset is the only required
+						type of Assets, Stops and Connections, therefore the most basic
+						TourML instance could only contain a list of assets that appear in
+						a tour.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Stop" type="tourml:StopType"
+				minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A collection of assets experienced together
+						compose a Stop in TourML. Stops represent the nodes of the tour
+						graph. Users can arrive at stops through navigational methods
+						and/or connections with other stops.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Connection" type="tourml:ConnectionType"
+				minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A connection from one stop to another.
+						Connections are used to let a user move from one stop to another.
+						Connections can be thought of as a directional edge in the tour
+						graph. Bi-directional connections should be represented by
+						repeating this element.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute ref="tourml:id" use="required" />
+		<xsd:attribute ref="tourml:lastModified" use="optional" />
+	</xsd:complexType>
+
+	<xsd:complexType name="TourMetadataType">
+		<xsd:sequence>
 			<xsd:element name="Title" type="tourml:TitleType"
 				minOccurs="0" maxOccurs="unbounded" />
 			<xsd:element name="Description" type="tourml:DescriptionType"
@@ -82,43 +124,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="Asset" type="tourml:AssetType"
-				maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation>A general asset for a tour. This element is used
-						to refer to media assets that occur in a tour. All instances of
-						this element inherit from the abstract AssetType. At least one
-						asset must be specified for all tours. Asset is the only required
-						type of Assets, Stops and Connections, therefore the most basic
-						TourML instance could only contain a list of assets that appear in
-						a tour.
-					</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Stop" type="tourml:StopType"
-				minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation>A collection of assets experienced together
-						compose a Stop in TourML. Stops represent the nodes of the tour
-						graph. Users can arrive at stops through navigational methods
-						and/or connections with other stops.
-					</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Connection" type="tourml:ConnectionType"
-				minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation>A connection from one stop to another.
-						Connections are used to let a user move from one stop to another.
-						Connections can be thought of as a directional edge in the tour
-						graph. Bi-directional connections should be represented by
-						repeating this element.
-					</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
 		</xsd:sequence>
-		<xsd:attribute ref="tourml:id" use="required" />
-		<xsd:attribute ref="tourml:lastModified" use="optional" />
 	</xsd:complexType>
 
 	<xsd:complexType name="TourRefType">
@@ -175,6 +181,7 @@
 		<xsd:attribute ref="tourml:srcId" use="required" />
 		<xsd:attribute ref="tourml:destId" use="required" />
 		<xsd:attribute ref="tourml:priority" use="optional" />
+		<xsd:attribute ref="tourml:usage" use="optional" />
 	</xsd:complexType>
 
 	<xsd:complexType name="AssetSourceType">

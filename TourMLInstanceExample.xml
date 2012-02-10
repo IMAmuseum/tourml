@@ -7,31 +7,32 @@
 	xsi:schemaLocation="http://www.imamuseum.org/TourML/2011/11 TourML.xsd"
 	tourml:id="org.imamuseum.tap.ToLiveForever">
 
+	<tourml:TourMetadata>
+		<!-- Title information of the tour -->
+		<tourml:Title xml:lang="en">A sample TourML document</tourml:Title>
+		<tourml:Title xml:lang="es">Una muestra TourML documento</tourml:Title>
+		<tourml:Description xml:lang="en">
+	        This tour is meant to demonstrate proper usage of the TourML standard.
+		</tourml:Description>
+		<tourml:Description xml:lang="es">
+	        .....
+		</tourml:Description>
+		
+		<!-- General tour metadata -->
+		<tourml:Author>Indianapolis Museum of Art</tourml:Author>
+		<tourml:PublishDate>2010-10-14</tourml:PublishDate>
+		
+		<tourml:PropertySet>
+			<tourml:Property tourml:name="google-analytics">UA-123456</tourml:Property>
+		</tourml:PropertySet>
+		
+		<!-- An optional pointer to the first stop to start at -->
+		<tourml:RootStopRef tourml:id="stop-1"/>
 	
-	<!-- Title information of the tour -->
-	<tourml:Title xml:lang="en">A sample TourML document</tourml:Title>
-	<tourml:Title xml:lang="es">Una muestra TourML documento</tourml:Title>
-	<tourml:Description xml:lang="en">
-        This tour is meant to demonstrate proper usage of the TourML standard.
-	</tourml:Description>
-	<tourml:Description xml:lang="es">
-        .....
-	</tourml:Description>
-	
-	<!-- General tour metadata -->
-	<tourml:Author>Indianapolis Museum of Art</tourml:Author>
-	<tourml:PublishDate>2010-10-14</tourml:PublishDate>
-	
-	<tourml:PropertySet>
-		<tourml:Property tourml:name="google-analytics">UA-123456</tourml:Property>
-	</tourml:PropertySet>
-	
-	<!-- An optional pointer to the first stop to start at -->
-	<tourml:RootStopRef tourml:id="stop-1"/>
-
-	<!-- List of all application specific resources -->
-	<tourml:AppResource tourml:id="app-icon" tourml:usage="icon" />
-	<tourml:AppResource tourml:id="app-splash" tourml:usage="splash" />
+		<!-- List of all application specific resources -->
+		<tourml:AppResource tourml:id="app-icon" tourml:usage="icon" />
+		<tourml:AppResource tourml:id="app-splash" tourml:usage="splash" />
+	</tourml:TourMetadata>
 	
 	<!-- List of all tour assets -->
 	<tourml:Asset tourml:id="img-1">
@@ -143,7 +144,7 @@
 	</tourml:Stop>
 	
 	<!-- Example of a web stop -->
-	<tourml:Stop tourml:id="stop-5">
+	<tourml:Stop tourml:id="stop-5" tourml:view="WebStop">
 		<tourml:Title xml:lang="en">Learn about mummies on Wikipedia</tourml:Title>
 		<tourml:AssetRef tourml:id="web-1" tourml:usage="primary"/>
 		<tourml:PropertySet>
@@ -152,7 +153,7 @@
 	</tourml:Stop>
 	
 	<!-- Example of an object stop -->
-	<tourml:Stop tourml:id="stop-6">
+	<tourml:Stop tourml:id="stop-6" tourml:view="ObjectStop">
 		<tourml:Title xml:lang="en">Explore the object you are standing by</tourml:Title>
 		<tourml:AssetRef tourml:id="obj-1" />
 		<tourml:PropertySet>
@@ -161,7 +162,7 @@
 	</tourml:Stop>
 	
 	<!-- Example of geolocation information in a stop -->
-	<tourml:Stop tourml:id="stop-7">
+	<tourml:Stop tourml:id="stop-7" tourml:view="GeoStop">
 		<tourml:Title xml:lang="en">See where this mummy was discovered</tourml:Title>
 		<tourml:AssetRef tourml:id="geo-1" />
 	</tourml:Stop>
