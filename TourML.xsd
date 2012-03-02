@@ -152,6 +152,7 @@
 			</xsd:choice>
 		</xsd:sequence>
 		<xsd:attribute ref="tourml:id" use="required" />
+		<xsd:attribute ref="tourml:type" use="optional" />
 	</xsd:complexType>
 
 	<xsd:complexType name="StopType">
@@ -193,6 +194,7 @@
 		<xsd:attribute ref="tourml:uri" />
 		<xsd:attribute ref="tourml:format" />
 		<xsd:attribute ref="tourml:lastModified" use="optional" />
+		<xsd:attribute ref="tourml:part" use="optional" />
 	</xsd:complexType>
 	
 	<xsd:complexType name="AssetContentType">
@@ -204,6 +206,7 @@
 		<xsd:attribute ref="tourml:lastModified" use="optional" />
 		<xsd:attribute ref="xml:lang" />
 		<xsd:attribute ref="tourml:format" use="optional" />
+		<xsd:attribute ref="tourml:part" use="optional" />
 	</xsd:complexType>
 
 	<xsd:complexType name="AssetRightsType">
@@ -313,5 +316,7 @@
 	<xsd:attribute name="priority" type="xsd:float" />
 	<xsd:attribute name="usage" type="xsd:string" />
 	<xsd:attribute name="name" type="xsd:string" />
+	<xsd:attribute name="part" type="xsd:string" />
+	<xsd:attribute name="type" type="xsd:string" />
 	
 </xsd:schema>
