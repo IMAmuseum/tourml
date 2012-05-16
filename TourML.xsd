@@ -25,14 +25,14 @@
 			<xsd:documentation>A TourSet element may be used as the top-level
 				element of a TourML instance in order to represent one or more
 				tours. The complete content of the tours can be placed under this
-				element or a set of TourRef elements, which can be used to refer to
+				element or a set of TourMLRef elements, which can be used to refer to
 				other TourML instances by URI.
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:choice>
 				<xsd:element ref="tourml:Tour" minOccurs="1" maxOccurs="unbounded" />
-				<xsd:element name="TourRef" type="tourml:TourRefType"
+				<xsd:element name="TourMLRef" type="tourml:TourMLRefType"
 					minOccurs="1" maxOccurs="unbounded" />
 			</xsd:choice>
 			<xsd:attribute ref="tourml:lastModified" use="optional" />
@@ -127,9 +127,9 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="TourRefType">
+	<xsd:complexType name="TourMLRefType">
 		<xsd:annotation>
-			<xsd:documentation>The TourRef type should provide a URI to an
+			<xsd:documentation>The TourMLRef type should provide a URI to an
 				external TourML instance. This allows for the aggregation of many
 				TourML tours together in one TourML instance.
 			</xsd:documentation>
