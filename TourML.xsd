@@ -140,16 +140,14 @@
 
 	<xsd:complexType name="AssetType">
 		<xsd:sequence>
+			<xsd:choice minOccurs="1" maxOccurs="unbounded">
+				<xsd:element name="Source" type="tourml:AssetSourceType" />
+				<xsd:element name="Content" type="tourml:AssetContentType" />
+			</xsd:choice>
 			<xsd:element name="AssetRights" type="tourml:AssetRightsType"
 				minOccurs="0" maxOccurs="1" />
 			<xsd:element name="PropertySet" type="tourml:PropertySetType" 
 				minOccurs="0" maxOccurs="1" />
-			<xsd:choice>
-				<xsd:element name="Source" type="tourml:AssetSourceType" 
-					minOccurs="1" maxOccurs="unbounded" />
-				<xsd:element name="Content" type="tourml:AssetContentType" 
-					minOccurs="1" maxOccurs="unbounded" />
-			</xsd:choice>
 		</xsd:sequence>
 		<xsd:attribute ref="tourml:id" use="required" />
 		<xsd:attribute ref="tourml:type" use="optional" />
@@ -199,7 +197,7 @@
 	
 	<xsd:complexType name="AssetContentType">
 		<xsd:sequence>
-			<xsd:element name="Data" type="xsd:anyType" minOccurs="1" maxOccurs="unbounded" />
+			<xsd:element name="Data" type="xsd:anyType" />
 			<xsd:element name="PropertySet"
 				type="tourml:PropertySetType" minOccurs="0" />
 		</xsd:sequence>
