@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<schema xmlns="http://www.ascc.net/xml/schematron">
+<schema xmlns="http://purl.oclc.org/dsdl/schematron">
 	<ns uri="http://www.imamuseum.org/TourML/2011/11" prefix="tourml"/>
 
 	<pattern name="Stop Type: Audio">
