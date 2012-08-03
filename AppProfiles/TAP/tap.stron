@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<schema xmlns="http://www.ascc.net/xml/schematron">
+	<ns uri="http://www.imamuseum.org/TourML/2011/11" prefix="tourml"/>
+
+	<pattern name="Stop Type: Audio">
+		<rule context="tourml:Stop[@tourml:view='tour_audio_stop']">
+			<assert test="tourml:AssetRef[@tourml:usage='tour_audio']">
+				Missing AssetRef element with usage attribute 'tour_audio'
+			</assert>
+		</rule>
+	</pattern>
+
+	<pattern name="Stop Type: Image">
+		<rule context="tourml:Stop[@tourml:view='tour_image_stop']">
+			<assert test="tourml:AssetRef[@tourml:usage='image_asset']">
+				Missing AssetRef element with usage attribute 'image_asset'
+			</assert>
+		</rule>
+	</pattern>
+
+	<pattern name="Stop Type: Video">
+		<rule context="tourml:Stop[@tourml:view='tour_video_stop']">
+			<assert test="tourml:AssetRef[@tourml:usage='tour_video']">
+				Missing AssetRef element with usage attribute 'tour_video'
+			</assert>
+		</rule>
+	</pattern>
+
+	<pattern name="Stop Type: Group">
+		<rule context="tourml:Stop[@tourml:view='tour_stop_group']">
+			<assert test="tourml:AssetRef[@tourml:usage='header_image']">
+				Missing AssetRef element with usage attribute 'header_image'
+			</assert>
+		</rule>
+	</pattern>
+
+	<pattern name="Asset Type: Audio">
+		<rule context="tourml:Asset[@tourml:type='tour_audio']">
+			<assert test="tourml:Source">
+				Missing Source element for Asset with type attribute 'tour_audio'
+			</assert>
+		</rule>
+	</pattern>
+
+	<pattern name="Asset Type: Image">
+		<rule context="tourml:Asset[@tourml:type='image_asset']">
+			<assert test="tourml:Source">
+				Missing Source element for Asset with type attribute 'tour_audio'
+			</assert>
+		</rule>
+	</pattern>
+
+	<pattern name="Asset Type: Video">
+		<rule context="tourml:Asset[@tourml:type='tour_video']">
+			<assert test="tourml:Source">
+				Missing Source element for Asset with type attribute 'tour_video'
+			</assert>
+		</rule>
+	</pattern>
+
+</schema>
