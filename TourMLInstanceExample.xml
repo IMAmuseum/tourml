@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tourml:Tour xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:tourml="http://www.imamuseum.org/TourML/2011/11"
+	xmlns:tourml="http://tapintomuseums.org/TourML"
 	xmlns:xml="http://www.w3.org/XML/1998/namespace"
 	xmlns:gml="http://www.opengis.net/gml"
-	xsi:schemaLocation="http://www.imamuseum.org/TourML/2011/11 TourML.xsd"
+	xsi:schemaLocation="http://tapintomuseums.org/TourML TourML.xsd"
 	tourml:id="org.imamuseum.tap.ToLiveForever">
 
 	<tourml:TourMetadata>
@@ -20,11 +20,6 @@
 		
 		<!-- General tour metadata -->
 		<tourml:Author>Indianapolis Museum of Art</tourml:Author>
-		<tourml:PublishDate>2010-10-14</tourml:PublishDate>
-		
-		<tourml:PropertySet>
-			<tourml:Property tourml:name="google-analytics">UA-123456</tourml:Property>
-		</tourml:PropertySet>
 		
 		<!-- An optional pointer to the first stop to start at -->
 		<tourml:RootStopRef tourml:id="stop-1"/>
@@ -32,6 +27,11 @@
 		<!-- List of all application specific resources -->
 		<tourml:AppResource tourml:id="app-icon" tourml:usage="icon" />
 		<tourml:AppResource tourml:id="app-splash" tourml:usage="splash" />
+		
+		<!-- Application wide properties -->
+		<tourml:PropertySet>
+			<tourml:Property tourml:name="google-analytics">UA-123456</tourml:Property>
+		</tourml:PropertySet>
 	</tourml:TourMetadata>
 	
 	<!-- List of all tour assets -->
