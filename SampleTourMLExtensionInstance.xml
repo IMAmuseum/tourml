@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tourml:Tour xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tourml="http://tapintomuseums.org/TourML"
+	xmlns:sample="http://example.com/SampleTourMLExtension"
+	xmlns:gml="http://www.opengis.net/gml"
+	xsi:schemaLocation="http://tapintomuseums.org/TourML TourML.xsd
+		http://example.com/SampleTourMLExtension SampleTourMLExtension.xsd"
+	tourml:id="com.example.SampleTourMLExtension">
+	
+	<!-- This demonstrates how to use the sample TourML extension stop type (see SampleTourMLExtension.xsd) -->
+	<tourml:Stop xsi:type="sample:CustomStopType" tourml:view="geo-stop" tourml:id="geo-stop-1">
+		<tourml:Title>Sample Geo Stop</tourml:Title>
+		<gml:Point srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+			<gml:pos>49.40 -123.26</gml:pos>
+		</gml:Point>
+	</tourml:Stop>
+	
+</tourml:Tour>

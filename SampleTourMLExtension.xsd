@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://example.com/SampleTourMLExtension"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tourml="http://tapintomuseums.org/TourML"
+	xmlns:gml="http://www.opengis.net/gml"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<!-- This file demonstrates how to extend TourML to formally include other specifications. -->
+
+	<xsd:import namespace="http://tapintomuseums.org/TourML" schemaLocation="TourML.xsd" />
+	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/feature.xsd" />
+	
+	<!-- This is an example of extending the tourml:StopType in order to include a Point from the GML specification -->
+	<xsd:complexType name="CustomStopType">
+		<xsd:complexContent>
+			<xsd:extension base="tourml:StopType">
+				<xsd:sequence>
+					<xsd:element ref="gml:Point" minOccurs="0" maxOccurs="1" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>
