@@ -1,22 +1,7 @@
-## About TourML
+TourML was created to serve as a simple and portable representation for tour content. Having a common language for this content will enable content management systems, kiosks, and mobile applications to speak a common language. Additionally, users of TourML will be better positioned to share and sustain their content no matter how the technology that we use to deliver these tours changes.
 
-The primary goal of TourML is to serve as a portable representation for museum tour content. Having a common language for this content will enable content management systems, kiosks, and mobile applications to speak a common language.
+**[[TourML Documentation|https://github.com/IMAmuseum/tourml/wiki]]**
 
-Visit [http://TAPintoMuseums.org/TourML](http://TAPintoMuseums.org/TourML) to learn more about this specification.
+## TourML's License
 
-There are 3 core components to a TourML instance:
-
-1. The media assets for the tour
-2. The stops in which assets are experienced
-3. The connections for moving from one stop to another
-
-How to first navigate to a stop is NOT part of TourML, though you can encode information that helps your specific navigation needs. For example, you can specify a code on a stop that a user must enter into the application. You can also put geo data on your stops to show them in a map. There are many other navigation mechanisms and new ones will appear as technology changes. The content will remain though, and this is the guiding principal for developing TourML.
-
-#### Asset
-Asset elements in TourML refer to a single media asset. There are several Asset types in the specification: VideoAsset?, ImageAsset?, and WebAsset? are just a few examples. Asset is the only required core element, so a TourML instance at a minimum must describe all the Assets associated with a tour. No Stops or Connections have to be given.
-
-#### Stop
-We define a Stop as a set of Assets that are meant to be experienced together. This might be limited to a single video to play, or it could be composed of a set of images for a slideshow with a background audio track and a header image. A Stop refers to the related Assets and describes their usage.
-
-#### Connection
-A Connection is a one-way relationship from one Stop to another. Connections are used to convey how a user can move between Stops. The ability to move back and forth between two Stops should be represented with separate Connections. Through Connections, authors are building a graph (directed acyclic graph specifically) of the tour.
+TourML is distributed under a [[Creative Commons Attribution-NoDerivs 3.0 Unported License|http://creativecommons.org/licenses/by-nd/3.0/]]. As TourML is an open specification meant to support any kind of tour content, this license was selected to help ensure that variants of the TourML specification do not detract from the original goal, having an agreed upon specification for the community. It is our hope that any limitations found in TourML can be addressed in future versions of the specification. This license does not restrict the usage of TourML in commercial products.
