@@ -23,19 +23,19 @@
 						</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
-				<xsd:element name="Asset" type="tourml:AssetType" minOccurs="0" maxOccurs="unbounded">
-					<xsd:annotation>
-						<xsd:documentation>
-							A general asset for a tour. This element is used to refer to media assets that occur in a
-							tour.
-						</xsd:documentation>
-					</xsd:annotation>
-				</xsd:element>
 				<xsd:element name="Stop" type="tourml:StopType" minOccurs="0" maxOccurs="unbounded">
 					<xsd:annotation>
 						<xsd:documentation>
 							A collection of assets experienced together compose a Stop in TourML. Stops represent the
 							nodes of the tour graph.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Asset" type="tourml:AssetType" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>
+							A general asset for a tour. This element is used to refer to media assets that occur in a
+							tour.
 						</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
