@@ -34,72 +34,6 @@
 		</tourml:PropertySet>
 	</tourml:TourMetadata>
 	
-	<!-- List of all tour assets -->
-	<tourml:Asset tourml:id="img-1">
-		<tourml:Source tourml:format="image/png" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/ankh-ct.png" />
-	</tourml:Asset>
-	
-	<tourml:Asset tourml:id="icon-1">
-		<tourml:Source tourml:format="image/jpg" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/icon1.jpg" />
-	</tourml:Asset>
-	
-	<tourml:Asset tourml:id="caption-1">
-		<tourml:Content xml:lang="en" tourml:lastModified="2011-09-29T12:01:32">
-			<tourml:Data>This is a caption</tourml:Data>
-		</tourml:Content>
-		<tourml:Content xml:lang="es" tourml:lastModified="2011-09-29T12:01:32">
-			<tourml:Data>Se trata de un título</tourml:Data>
-		</tourml:Content>
-	</tourml:Asset>
-	
-	<tourml:Asset tourml:id="vid-1">
-		<tourml:Source tourml:format="video/quicktime" tourml:lastModified="2011-09-29T12:01:32" xml:lang="en" tourml:uri="file:///videos/ankh-ct.mov">
-			<tourml:PropertySet>
-				<tourml:Property tourml:name="duration">00:10:36</tourml:Property>
-				<tourml:Property tourml:name="width">1920</tourml:Property>
-				<tourml:Property tourml:name="height">1080</tourml:Property>
-			</tourml:PropertySet>
-		</tourml:Source>
-		<tourml:Source tourml:format="video/ogg-theora" tourml:lastModified="2011-09-29T12:01:32" xml:lang="en" tourml:uri="file:///videos/ankh-ct.ogg">
-			<tourml:PropertySet>
-				<tourml:Property tourml:name="duration">00:10:32</tourml:Property>
-				<tourml:Property tourml:name="width">1920</tourml:Property>
-				<tourml:Property tourml:name="height">1280</tourml:Property>
-			</tourml:PropertySet>
-		</tourml:Source>
-	</tourml:Asset>
-	
-	<tourml:Asset tourml:id="geo-1">
-		<tourml:Content tourml:format="gml" tourml:lastModified="2011-09-29T12:01:32">
-			<tourml:Data>
-				<gml:Point srsName="EPSG:4326">
-					<gml:pos>21.052 -10.854</gml:pos>
-				</gml:Point>
-			</tourml:Data>
-		</tourml:Content>
-	</tourml:Asset>
-	
-	<tourml:Asset tourml:id="aud-1">
-		<tourml:Source tourml:format="audio/mp3" tourml:lastModified="2011-09-29T12:01:32" xml:lang="en" tourml:uri="./audio/abbot-interview-english.mp3" />
-		<tourml:Source tourml:format="audio/mp3" tourml:lastModified="2011-09-29T12:01:32" xml:lang="es" tourml:uri="./audio/abbot-interview-spanish.mp3" />
-	</tourml:Asset>
-	
-	<tourml:Asset tourml:id="www-1">
-		<tourml:Source tourml:format="text/html" tourml:uri="http://en.wikipedia.org/wiki/Mummy" />
-	</tourml:Asset>
-	
-	<tourml:Asset tourml:id="obj-1">
-		<tourml:Source tourml:format="text/xml" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///objects.xml" />
-	</tourml:Asset>
-	
-	<tourml:Asset tourml:id="app-icon">
-		<tourml:Source tourml:format="image/jpg" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/app-icon.jpg" />
-	</tourml:Asset>
-	
-	<tourml:Asset tourml:id="app-splash">
-		<tourml:Source tourml:format="image/jpg" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/app-splash.jpg" />
-	</tourml:Asset>
-		
 	<!-- List of all tour stops -->
 	
 	<!-- Example of a stop group.  Refer to the Connections for this stop. -->
@@ -166,6 +100,72 @@
 		<tourml:Title xml:lang="en">See where this mummy was discovered</tourml:Title>
 		<tourml:AssetRef tourml:id="geo-1" />
 	</tourml:Stop>
+	
+	<!-- List of all tour assets -->
+	<tourml:Asset tourml:id="img-1">
+		<tourml:Source tourml:format="image/png" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/ankh-ct.png" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="icon-1">
+		<tourml:Source tourml:format="image/jpg" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/icon1.jpg" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="caption-1">
+		<tourml:Content xml:lang="en" tourml:lastModified="2011-09-29T12:01:32">
+			<tourml:Data>This is a caption</tourml:Data>
+		</tourml:Content>
+		<tourml:Content xml:lang="es" tourml:lastModified="2011-09-29T12:01:32">
+			<tourml:Data>Se trata de un título</tourml:Data>
+		</tourml:Content>
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="vid-1">
+		<tourml:Source tourml:format="video/quicktime" tourml:lastModified="2011-09-29T12:01:32" xml:lang="en" tourml:uri="file:///videos/ankh-ct.mov">
+			<tourml:PropertySet>
+				<tourml:Property tourml:name="duration">00:10:36</tourml:Property>
+				<tourml:Property tourml:name="width">1920</tourml:Property>
+				<tourml:Property tourml:name="height">1080</tourml:Property>
+			</tourml:PropertySet>
+		</tourml:Source>
+		<tourml:Source tourml:format="video/ogg-theora" tourml:lastModified="2011-09-29T12:01:32" xml:lang="en" tourml:uri="file:///videos/ankh-ct.ogg">
+			<tourml:PropertySet>
+				<tourml:Property tourml:name="duration">00:10:32</tourml:Property>
+				<tourml:Property tourml:name="width">1920</tourml:Property>
+				<tourml:Property tourml:name="height">1280</tourml:Property>
+			</tourml:PropertySet>
+		</tourml:Source>
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="geo-1">
+		<tourml:Content tourml:format="gml" tourml:lastModified="2011-09-29T12:01:32">
+			<tourml:Data>
+				<gml:Point srsName="EPSG:4326">
+					<gml:pos>21.052 -10.854</gml:pos>
+				</gml:Point>
+			</tourml:Data>
+		</tourml:Content>
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="aud-1">
+		<tourml:Source tourml:format="audio/mp3" tourml:lastModified="2011-09-29T12:01:32" xml:lang="en" tourml:uri="./audio/abbot-interview-english.mp3" />
+		<tourml:Source tourml:format="audio/mp3" tourml:lastModified="2011-09-29T12:01:32" xml:lang="es" tourml:uri="./audio/abbot-interview-spanish.mp3" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="www-1">
+		<tourml:Source tourml:format="text/html" tourml:uri="http://en.wikipedia.org/wiki/Mummy" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="obj-1">
+		<tourml:Source tourml:format="text/xml" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///objects.xml" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="app-icon">
+		<tourml:Source tourml:format="image/jpg" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/app-icon.jpg" />
+	</tourml:Asset>
+	
+	<tourml:Asset tourml:id="app-splash">
+		<tourml:Source tourml:format="image/jpg" tourml:lastModified="2011-09-29T12:01:32" tourml:uri="file:///images/app-splash.jpg" />
+	</tourml:Asset>
 	
 	<!-- List of all tour connections -->
 	
