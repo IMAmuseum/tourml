@@ -1,34 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
-// FONTS
-@font-face {
-  font-family: "Taz";
-  src: url(../fonts/Taz_TT5_.eot);
-}
-@font-face {
-  font-family: "Taz";
-  src: url(../fonts/Taz_TT5_.woff) format("woff");
-}
-@font-face {
-  font-family: "TazBold";
-  src: url(../fonts/Taz_TT7_.eot);
-}
-@font-face {
-  font-family: "TazBold";
-  src: url(../fonts/Taz_TT7_.woff) format("woff");
-}
-@font-face {
-  font-family: "TazLight";
-  src: url(../fonts/Taz_TT3_.eot);
-}
-@font-face {
-  font-family: "TazLight";
-  src: url(../fonts/Taz_TT3_.woff) format("woff");
-}
-
 body {
   padding:50px;
-  font:14px/1.5 "Taz", Helvetica, Arial, sans-serif;
+  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   font-weight:300;
 }
